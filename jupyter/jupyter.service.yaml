@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: jupyter
 spec:
+  type: NodePort
   selector:
     app: jupyter
   ports:
