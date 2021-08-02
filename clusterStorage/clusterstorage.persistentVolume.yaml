@@ -10,7 +10,7 @@ reclaimPolicy: Retain
 apiVersion: v1
 kind: PersistentVolume
 metadata: 
-  name: sql-data
+  name: cluster-storage
 spec: 
   capacity: 
     storage: 2Gi
