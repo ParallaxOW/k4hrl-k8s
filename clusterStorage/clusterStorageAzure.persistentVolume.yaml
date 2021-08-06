@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: azure-pv
+spec:
+  capacity:
+    storage: 10Gi
+  accessModes:
+    - ReadWriteOnce
+    - ReadOnlyMany
+  persistentVolumeReclaimPolicy: Retain
+  azureFile:
+    secretName: 'uTR1fsqikOdUIc4ytGy+UtxA6OI4IrRAbU0bHSkMGoNUw5ohZCIfM/M0ROSbGvXJB5+E1iQ3QjS0T85uGU1KRg=='
+    shareName: 'https://saandi.file.core.windows.net/clusterstorage'
+    readOnly: false
